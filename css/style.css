@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 30px 0;
+    background-color: #ffff;
+}
+
+.flex-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 35px;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 400px;
+    text-decoration: none;
+    color: #545454;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+}
+
+.slogan {
+    font: 400 13px Arial;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+}
+
+nav a {
+    display: block;
+    padding-bottom: 4px;
+    text-decoration: none;
+    font: 15px Arial;
+    line-height: 160%;
+    color: #545454;
+}
+
+.active {
+    border-bottom: solid #F1CDB3 3px;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+main {
+    padding: 80px 0 100px;
+    background-color: #F6F6F6;
+}
+
+h1 {
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    line-height: 130%;
+    color: #545454;
+}
+
+.pets {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.pet-card {
+    background-color: #FAFAFA;
+    flex-basis: 270px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.pet-card p {
+    margin: 30px 0;
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.learn-more {
+    display: inline-block;
+    padding: 15px 45px;
+    border: solid 2px rgba(241, 205, 179, 1);
+    border-radius: 100px;
+    text-decoration: none;
+    font-size: 17px;
+    letter-spacing: 0.06em;
+    color: rgba(41, 41, 41, 1);
+}
+
+.pets-nav {
+    width: 340px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pets-nav-button {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.pets-nav .disabled {
+    color: #CDCDCD;
+    border: solid 1px #CDCDCD;
+    background-color: #F6F6F6;
+}
+
+.pets-nav .active-page {
+    color: rgba(41, 41, 41, 1);
+    background-color: #F1CDB3;
+    border: solid 1px #F1CDB3;
+}
+
+.pets-nav .active-nav {
+    color: rgba(41, 41, 41, 1);
+    border: solid 1px #F1CDB3;
+    background-color: #F6F6F6;
+}
+
+footer {
+    background: linear-gradient(90.26deg, #7D604B 0.23%, #251000 99.8%);
+    padding-top: 40px;
+}
+
+footer .flex-wrapper {
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+footer .flex-wrapper>div {
+    padding-top: 16px;
+    width: 300px;
+    margin-bottom: 40px;
+}
+
+footer h2 {
+    font-size: 35px;
+    color: #FFFFFF;
+    font-weight: normal;
+    letter-spacing: 0.06em;
+    line-height: 130%;
+    margin-bottom: 33px;
+}
+
+footer p {
+    min-height: 46px;
+    padding-left: 60px;
+    display: flex;
+    align-items: center;
+    color: rgba(241, 205, 179, 1);
+    font-size: 20px;
+    margin-bottom: 27px;
+    letter-spacing: 0.06em;
+}
+
+footer .email {
+    background: url(../images/icon-email.svg) no-repeat left center;
+}
+
+footer .tel {
+    background: url(../images/icon-phone.svg) no-repeat left center;
+}
+
+footer .local {
+    background: url(../images/icon-marker.svg) no-repeat left center;
+    padding-left: 42px;
+}
+
+footer a {
+    color: rgba(241, 205, 179, 1);
+    text-decoration: none;
+}
+
+@media(max-width:1200px) {
+    .container {
+        max-width: 95%;
+    }
+}
+
+@media(max-width:1136px) {
+    .pets {
+        justify-content: space-evenly;
+    }
+    .pets-scarlet, .pets-katrine {
+        display: none;
+    }
+}
+
+@media(max-width:950px) {
+    footer .flex-wrapper {
+        justify-content: space-evenly;
+    }
+}
+
+@media(max-width:768px) {
+    nav {
+        display: none;
+    }
+    .mobile-menu {
+        display: block;
+    }
+}
+
+@media(max-width:600px) {
+    h1 {
+        font-size: 25px;
+    }
+    .pets {
+        flex-direction: column;
+        width: 270px;
+        margin: 0 auto;
+    }
+    .pet-card:nth-child(even) {
+        display: none;
+    }
+}
